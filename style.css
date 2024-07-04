@@ -25,6 +25,18 @@ body,main,
     justify-content: center;
 }
 
+.logo img,
+.file-icon-container img {
+    display: block;
+}
+
+.file-icon-container img,
+.file,
+.storage,
+.range {
+    border-radius:5px;   
+}
+
 main {
     height: 100%;
     gap: 10px;
@@ -48,18 +60,6 @@ main {
 .file-icon-container {
     display: flex;
     gap: 10px;
-}
-
-.logo img,
-.file-icon-container img {
-    display: block;
-}
-
-.file-icon-container img,
-.file,
-.storage,
-.range {
-    border-radius:5px;   
 }
 
 .file-icon-container img {
@@ -168,8 +168,8 @@ main {
 
 footer {
     color:  hsl(228, 57%, 86%);
-    font-size: 14px;
-    padding: 0  10px;
+    font-size: 12px;
+    padding: 1px  10px;
 }
 
 footer a {

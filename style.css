@@ -6,19 +6,34 @@
     font-family: "Raleway", sans-serif;
 }
 
-body {
+/* body {
     font-size: 18px;
-    /* background-image: url('/images/bg-desktop.png');
+    background-image: url('/images/bg-desktop.png');
     background-position: center;
-    background-repeat: no-repeat; */
-    /* background-size: cover; */
+    background-repeat: no-repeat; 
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color:  hsl(229, 57%, 11%);
+} */
+
+body {
+    font-size: 18px;
+    background-image: url('/images/bg-desktop.png');
+    background-position: center bottom; /* Position the background image at the bottom */
+    background-repeat: no-repeat; 
+    background-size: 100% 50%; /* Make the background image cover the bottom half of the screen */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(229, 57%, 11%);
 }
+
+
 
 main {
     display: flex;
@@ -29,6 +44,7 @@ main {
 }
 .file {
     width: 11vw; 
+    min-width: 200px;
     background-color: hsl(228, 56%, 26%);
     padding: 15px;
     border-radius:5px;
@@ -69,10 +85,12 @@ main {
 
 .storage {
     width: 22vw; 
+    min-width: 250px;
     background-color: hsl(228, 56%, 26%);
     padding: 15px;
     border-radius:5px; 
     margin-top: 5px;
+    position: relative;
 }
 
 .storage p {
@@ -82,7 +100,7 @@ main {
 
 .bold-text {
  font-weight: 600;
- color: hsl(351, 87%, 57%);
+ color: hsl(351, 82%, 93%);
 }
 
 .range {
@@ -121,3 +139,52 @@ main {
     font-weight: 600;
     margin-top: -2px;
 }
+
+.gb-text {
+    font-weight: 700;
+    font-size: 14px;
+    color: hsl(116, 68%, 40%);   
+}
+
+.display-range {
+    text-transform: uppercase;
+    color: hsl(229, 7%, 55%);
+    font-size: 10px;
+    font-weight: 600;
+    background-color: hsl(0, 0%, 100%);
+    width: fit-content;
+    padding: 10px 10px;
+    border-radius:5px; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: absolute;
+    top: -15px;
+    right: 10px;
+}
+
+.display-range:after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    right: 30px; /* Adjust as needed */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(0, 0%, 100%);
+}
+
+footer {
+    color:  hsl(228, 57%, 86%);
+    font-size: 14px;
+}
+
+footer a {
+    color: #bbeefa;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
